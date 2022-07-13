@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.flexbox{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.r1 {
+  width: 100%;
+  background: green;
+  height: 20%;
+border:1px solid;
+border-color: white;
+
+}
+
+
+.r2 {
+  width: 100%;
+  background: red;
+  height: 70%;
+border:1px solid;
+border-color: white;
+
+}
+
+.r3 {
+  width: 100%;
+  background: yellow;
+  height: 10%;
+border:1px solid;
+border-color: white;
+
+}
+</style>
+</head>
+<body>
+
+<h1>Responsive Flexbox</h1>
+
+<p>The "flex-direction: row;" stacks the flex items horizontally (from left to right).</p>
+<p>The "flex-direction: column;" stacks the flex items vertically (from top to bottom).</p>
+<p><b>Resize the browser window to see that the direction changes when the 
+screen size is 800px wide or smaller.</b></p>
+
+<div class="flexbox">
+  <div class="r1">Row 1</div>
+  <div class="r2">Row 2</div>
+  <div class="r3">Row 3</div>
+  
+</div>
+
+</body>
+</html>
+
+
