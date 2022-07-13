@@ -1,0 +1,27 @@
+body {
+  background-color: lightblue;
+  margin-left: 100px;
+}
+
+.address{
+  text-align: left;
+  color: #669900;
+  font-size: 30px;
+
+}
+.orderhed{
+  text-align: center;
+  color: #ffff00;
+  font-size: 70px;
+
+}
+
+.addressdet{
+  text-align: center;
+  border:1px solid;
+  width:30%;
+  padding: 10px;
+}
+
+table { margin: auto; }
+
