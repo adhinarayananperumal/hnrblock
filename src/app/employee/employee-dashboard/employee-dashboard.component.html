@@ -1,0 +1,12 @@
+<h4>Employee Dashboard </h4>
+
+
+
+<table>
+    <tr *ngFor="let empItem of empList">
+        <td> {{ empItem.employeeName }} </td>
+        <td> {{ empItem.empId }} </td>
+        <td> {{ empItem.age }} </td>
+        <td> {{ empItem.gender }} </td>
+    </tr>
+</table>

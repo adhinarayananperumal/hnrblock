@@ -1,0 +1,35 @@
+<p>prod works!</p>
+
+
+
+{{moduleDet}}
+
+
+<p>Products:</p>
+<ul>
+  <li *ngFor="let prod of products">
+    {{ prod }}
+  </li>
+</ul>
+
+<div *ngIf="prodlist.length>0; else noproduct">
+
+  <p> Total no of products available - {{prodlist.length}}</p>
+
+  <ul>
+    <li *ngFor="let prodItem of prodlist">
+      {{ prodItem.pid }} -
+      {{ prodItem.productName }}
+    </li>
+  </ul>
+
+</div>
+
+<ng-template #noproduct>
+  No Product Available</ng-template>
+
+
+  <button (click)="displayProductDetails()">Click here</button>
+
+
+  <a (click)="registerCustomer();">Register Customer</a>
