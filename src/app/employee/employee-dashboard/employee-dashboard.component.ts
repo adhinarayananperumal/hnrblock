@@ -10,15 +10,21 @@ import { Employee } from '../employee';
 export class EmployeeDashboardComponent implements OnInit {
 
   constructor(private employeeService: EmployeeService) {
-
-
   }
+
+  empList: Employee[] = [];
+
 
   ngOnInit(): void {
+    console.log("ng on init is called emp comp");
+    this.employeeService.getEmployeeList().subscribe((data: Employee[])=>{
+      console.log(data);
+      this.empList = data;
+    })  ;
   }
 
 
-  empList = this.employeeService.getEmployeeList();
+
 
 
 }

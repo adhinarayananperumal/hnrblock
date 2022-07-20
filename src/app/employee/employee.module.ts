@@ -6,6 +6,7 @@ import { EmployeeDashboardComponent } from './employee-dashboard/employee-dashbo
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from '../app-routing.module';
 import { EmployeeService } from '../service/employee/employee.service';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -17,7 +18,8 @@ import { EmployeeService } from '../service/employee/employee.service';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [EmployeeService],
   bootstrap: [LandingPageComponent]
