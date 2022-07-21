@@ -8,15 +8,21 @@ import { Observable } from 'rxjs/internal/Observable';
 })
 export class EmployeeService {
 
-
+  apiUrl ="http://localhost:3000/employees"
 
   empList: any = [];
 
   constructor(private http: HttpClient) {
   }
 
+  registerNewEmployee(employee: any): Observable<any> {
+    return this.http.post(this.apiUrl, employee);
+  }
+
+
+
   getEmployeeList(): Observable<any> {
-    console.log("service get getEmployeeList");
+    console.log("service  getEmployeeList called");
     return this.http.get('http://localhost:3000/employees');
   }
 

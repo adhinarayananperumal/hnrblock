@@ -1,1 +1,26 @@
 <h4>Employee Registration Form </h4>
+
+
+<form #employeeForm="ngForm" (ngSubmit)="employeeRegistration(employeeForm)">
+
+    <p>
+        <label for="employeeName">Employee Name</label>
+        <input type="text" name="employeeName" ngModel />
+    </p>
+
+    <p>
+        <label for="age">Employee Age</label>
+        <input type="number" name="age" ngModel />
+    </p>
+
+    <p>
+        <label for="gender">Geneder</label>
+        <input type="radio" value="male" name="gender" ngModel> Male
+        <input type="radio" value="female" name="gender" ngModel> Female
+    </p>
+
+    <p>
+        <button type="submit">Submit</button>
+    </p>
+
+</form>

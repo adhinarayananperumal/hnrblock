@@ -1,15 +1,27 @@
 import { Component, OnInit } from '@angular/core';
+import { EmployeeService } from 'src/app/service/employee/employee.service';
+import { Employee } from '../employee';
 
 @Component({
   selector: 'app-employee-registration',
   templateUrl: './employee-registration.component.html',
   styleUrls: ['./employee-registration.component.css']
 })
-export class EmployeeRegistrationComponent implements OnInit {
+export class EmployeeRegistrationComponent  {
 
-  constructor() { }
+  constructor(private employeeService: EmployeeService) {
 
-  ngOnInit(): void {
   }
 
-}
+    employeeRegistration(employeeForm1: { value: any; }) {
+      console.log(employeeForm1.value);
+
+      this.employeeService.registerNewEmployee(employeeForm1.value).subscribe((data) => {
+        console.log("Employee saved successfully....");
+      });
+    }
+
+
+
+
+  }

@@ -18,9 +18,11 @@ export class EmployeeDashboardComponent implements OnInit {
   ngOnInit(): void {
     console.log("ng on init is called emp comp");
     this.employeeService.getEmployeeList().subscribe((data: Employee[])=>{
-      console.log(data);
+      console.log("Display employee list....." + data);
       this.empList = data;
     })  ;
+
+    console.log("Component end")
   }
 
 
