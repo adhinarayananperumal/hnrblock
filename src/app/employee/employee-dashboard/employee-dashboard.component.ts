@@ -17,14 +17,30 @@ export class EmployeeDashboardComponent implements OnInit {
 
   ngOnInit(): void {
     console.log("ng on init is called emp comp");
-    this.employeeService.getEmployeeList().subscribe((data: Employee[])=>{
+    this.employeeService.getEmployeeList().subscribe((data: Employee[]) => {
       console.log("Display employee list....." + data);
       this.empList = data;
-    })  ;
+    });
 
     console.log("Component end")
   }
 
+
+  deleteEmployee(id: string): void {
+    console.log("delete employee method called....." + id);
+    this.employeeService.deleteEmployee(id).subscribe(() => {
+      console.log("Employee deleted successfully .....");
+
+      this.employeeService.getEmployeeList().subscribe((data: Employee[]) => {
+        console.log("Display employee list....." + data);
+        this.empList = data;
+      });
+  
+    });
+
+
+
+  }
 
 
 

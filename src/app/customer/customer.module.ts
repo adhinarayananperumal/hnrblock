@@ -15,6 +15,10 @@ import { BrowserModule } from '@angular/platform-browser';
     BrowserModule,
     AppRoutingModule
   ],
+  exports: [
+    CustomerComponent, // <--- Enable using the component in other modules
+  ],
+
   bootstrap: [CustomerComponent]
 
 })

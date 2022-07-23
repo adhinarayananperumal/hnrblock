@@ -1,12 +1,15 @@
 <h4>Employee Dashboard </h4>
 
-
-
 <table>
     <tr *ngFor="let empItem of empList">
         <td> {{ empItem.employeeName }} </td>
-        <td> {{ empItem.id }} </td>
+        <td> <a routerLink="/showEmployeeEditForm/{{empItem.id}}">{{ empItem.id }} </a>  </td>
         <td> {{ empItem.age }} </td>
         <td> {{ empItem.gender }} </td>
+        <td> <a routerLink="."  (click)="deleteEmployee(empItem.id)">Delete</a>  </td>
     </tr>
 </table>
+
+<app-account></app-account>
+
+<app-customer ></app-customer>

@@ -19,6 +19,23 @@ export class EmployeeService {
     return this.http.post(this.apiUrl, employee);
   }
 
+  updateEmployee(employee: any): Observable<any> {
+    console.log("Service......" + employee.age);
+    return this.http.put('http://localhost:3000/employees/'+employee.id, employee);
+  }
+
+
+  deleteEmployee(id: any): Observable<any> {
+    console.log("service  detelete called");
+    return this.http.delete('http://localhost:3000/employees/'+id);
+  }
+
+
+  getEmployee(id: any): Observable<any> {
+    console.log("service  getEmployeeList called");
+    return this.http.get('http://localhost:3000/employees/'+id);
+  }
+
 
 
   getEmployeeList(): Observable<any> {

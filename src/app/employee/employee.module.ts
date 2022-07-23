@@ -8,6 +8,10 @@ import { AppRoutingModule } from '../app-routing.module';
 import { EmployeeService } from '../service/employee/employee.service';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { EmployeeEditComponent } from './employee-edit/employee-edit.component';
+import { AppModule } from '../app.module';
+import { AccountComponent } from '../account/account.component';
+import { CustomerModule } from '../customer/customer.module';
 
 
 
@@ -15,13 +19,16 @@ import { FormsModule } from '@angular/forms';
   declarations: [
     LandingPageComponent,
     EmployeeRegistrationComponent,
-    EmployeeDashboardComponent
+    EmployeeDashboardComponent,
+    EmployeeEditComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    AppModule,
+    CustomerModule
   ],
   providers: [EmployeeService],
   bootstrap: [LandingPageComponent]

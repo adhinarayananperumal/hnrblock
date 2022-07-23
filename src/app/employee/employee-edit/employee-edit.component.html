@@ -1,0 +1,27 @@
+<p>employee-edit works!</p>
+
+
+<form (ngSubmit)="updateEmployeeDetails()">
+
+    <p>
+        <label for="id">Employee Id</label>
+        <input type="text" name="id" [(ngModel)]="employee.id" />
+    </p>
+
+
+    <p>
+        <label for="employeeName">Employee Name</label>
+        <input type="text" name="employeeName" [(ngModel)]="employee.employeeName" />
+    </p>
+
+    <p>
+        <label for="age">Employee Age</label>
+        <input type="number" name="employee" [(ngModel)]="employee.age" />
+    </p>
+
+
+    <p>
+        <button type="submit">Submit</button>
+    </p>
+
+</form>
