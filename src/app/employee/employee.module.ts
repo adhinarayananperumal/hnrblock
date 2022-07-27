@@ -12,6 +12,7 @@ import { EmployeeEditComponent } from './employee-edit/employee-edit.component';
 import { AppModule } from '../app.module';
 import { AccountComponent } from '../account/account.component';
 import { CustomerModule } from '../customer/customer.module';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -28,7 +29,8 @@ import { CustomerModule } from '../customer/customer.module';
     HttpClientModule,
     FormsModule,
     AppModule,
-    CustomerModule
+    CustomerModule,
+    RouterModule
   ],
   providers: [EmployeeService],
   bootstrap: [LandingPageComponent]

@@ -17,6 +17,15 @@ import { NgonchangeExpFlightSearchComponent } from './ngonchange-exp-flight-sear
 import { NgonchangeExpFlightDetailsComponent } from './ngonchange-exp-flight-details/ngonchange-exp-flight-details.component';
 import { FlightSearchComponent } from './flight-search/flight-search.component';
 import { FlightTimingsComponent } from './flight-timings/flight-timings.component';
+import { PrppertyBindingExpComponent } from './prpperty-binding-exp/prpperty-binding-exp.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgStyleExampleComponent } from './ng-style-example/ng-style-example.component';
+import { NgStyleActualComponent } from './ng-style-actual/ng-style-actual.component';
+import { NgSwitchExampleComponent } from './ng-switch-example/ng-switch-example.component';
+import { CusComponent } from './cus/cus.component';
+import { HttpClientModule } from '@angular/common/http';
+import { CusDashboardComponent } from './cus-dashboard/cus-dashboard.component';
+import { NgcontentexpComponent } from './ngcontentexp/ngcontentexp.component';
 
 @NgModule({
   declarations: [
@@ -32,12 +41,23 @@ import { FlightTimingsComponent } from './flight-timings/flight-timings.componen
     NgonchangeExpFlightSearchComponent,
     NgonchangeExpFlightDetailsComponent,
     FlightSearchComponent,
-    FlightTimingsComponent
+    FlightTimingsComponent,
+    PrppertyBindingExpComponent,
+    NgStyleExampleComponent,
+    NgStyleActualComponent,
+    NgSwitchExampleComponent,
+    CusComponent,
+    CusDashboardComponent,
+    NgcontentexpComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    CustomerModule
+    ReactiveFormsModule,
+    CustomerModule,
+    FormsModule,
+    HttpClientModule
+
   ],
   exports: [
     AccountComponent, // <--- Enable using the component in other modules
