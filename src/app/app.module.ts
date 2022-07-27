@@ -26,6 +26,8 @@ import { CusComponent } from './cus/cus.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CusDashboardComponent } from './cus-dashboard/cus-dashboard.component';
 import { NgcontentexpComponent } from './ngcontentexp/ngcontentexp.component';
+import { AdBannerComponent } from './ad-banner/ad-banner.component';
+import { DynamicAdsComponent } from './dynamic-ads/dynamic-ads.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +50,9 @@ import { NgcontentexpComponent } from './ngcontentexp/ngcontentexp.component';
     NgSwitchExampleComponent,
     CusComponent,
     CusDashboardComponent,
-    NgcontentexpComponent
+    NgcontentexpComponent,
+    AdBannerComponent,
+    DynamicAdsComponent
   ],
   imports: [
     BrowserModule,
